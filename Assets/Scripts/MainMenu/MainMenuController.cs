@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-
     int selectedCanvas;
     bool mainMenuOn;
 
