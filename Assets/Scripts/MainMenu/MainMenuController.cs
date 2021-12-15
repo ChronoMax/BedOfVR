@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.UI;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -12,6 +13,13 @@ public class MainMenuController : MonoBehaviour
 
     [SerializeField]
     Animator CanvassesAnimator;
+
+    GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
 
     public void OnPlayBttnClicked()
     {
@@ -69,6 +77,11 @@ public class MainMenuController : MonoBehaviour
 
         mainMenuOn = true;
         SwitchMainMenu();
+    }
+
+    public void ButtonFPS(bool toggle)//Show fps counter
+    {
+        gameManager.FPScounter(toggle);
     }
 
     void SwitchCanvas()
