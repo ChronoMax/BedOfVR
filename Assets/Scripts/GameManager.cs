@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     float fps;
     float deltaTime;
 
-    bool playingMinigame;
+    public bool playingMinigame;
 
     [SerializeField]
     Text timerText;
@@ -82,12 +82,19 @@ public class GameManager : MonoBehaviour
         if (playButtonText.text == textforPlayBtn[0])
         {
             playButtonText.text = textforPlayBtn[1];
-            playingMinigame = true;
         }
         else if (playButtonText.text == textforPlayBtn[1])
         {
             playButtonText.text = textforPlayBtn[0];
+        }
+
+        if (playingMinigame)
+        {
             playingMinigame = false;
+        }
+        else
+        {
+            playingMinigame = true;
         }
 
         TimerFunc();
