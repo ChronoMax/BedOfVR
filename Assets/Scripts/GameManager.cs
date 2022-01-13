@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         {
             playingMinigame = false;
         }
-        else
+        else if(!playingMinigame)
         {
             playingMinigame = true;
         }
