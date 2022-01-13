@@ -74,11 +74,6 @@ public class GameManager : MonoBehaviour
         if (playingMinigame)
         {
             timerSec = 60f;
-            playingMinigame = false;
-        }
-        else if (!playingMinigame)
-        {
-            playingMinigame = true;
         }
     }
 
@@ -87,10 +82,12 @@ public class GameManager : MonoBehaviour
         if (playButtonText.text == textforPlayBtn[0])
         {
             playButtonText.text = textforPlayBtn[1];
+            playingMinigame = true;
         }
         else if (playButtonText.text == textforPlayBtn[1])
         {
             playButtonText.text = textforPlayBtn[0];
+            playingMinigame = false;
         }
 
         TimerFunc();
