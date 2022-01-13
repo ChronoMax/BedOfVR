@@ -16,7 +16,7 @@ public class Pistol : MonoBehaviour
             if (hit.collider.tag == "Enemy")
             {
                 Destroy(hit.collider.gameObject);
-                //Add point
+                GameManager.Instance.addPoint();
             }
             else if (hit.collider.tag == "PlayBtnAlien")
             {

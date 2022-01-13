@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public bool playingMinigame = false;
 
     [SerializeField]
-    Text timerText;
+    Text timerText, scoreText, alienScoreText, boxingScoreText;
 
-    [SerializeField]
+    int tempScore, alienScore, boxingScore;
     float timerSec;
 
     [SerializeField]
@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         playButtonText.text = textforPlayBtn[0];
 
         FPScounter(toggleCheck);
+
+        SettingHighScore();
     }
 
     // Update is called once per frame
@@ -61,6 +63,12 @@ public class GameManager : MonoBehaviour
         {
             timerSec -= Time.deltaTime;
             timerText.text = "Time: 0:" + (int)timerSec;
+
+            if (timerSec <= 0)
+            {
+                StartAlienMG();
+            }
+            scoreText.text = "Score: " + tempScore;
         }
     }
 
@@ -69,12 +77,22 @@ public class GameManager : MonoBehaviour
         FPScounterText.enabled = toggle;
     }
 
+    public void addPoint()
+    {
+        tempScore++;
+    }
+
     void TimerFunc()
     {
         if (playingMinigame)
         {
             timerSec = 60f;
         }
+    }
+
+    void SettingHighScore()
+    {
+        scoreText.text = "Highscore: " + alienScore;
     }
 
     public void StartAlienMG()
@@ -90,6 +108,12 @@ public class GameManager : MonoBehaviour
 
         if (playingMinigame)
         {
+            alienScore = tempScore;
+            if (tempScore >= alienScore)
+            {
+                SettingHighScore();
+            }
+
             playingMinigame = false;
         }
         else if(!playingMinigame)
