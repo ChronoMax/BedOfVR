@@ -3739,6 +3739,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playingMinigame: 0
   timerText: {fileID: 7825283340094703290}
+  scoreText: {fileID: 1793089058}
+  alienScoreText: {fileID: 0}
+  boxingScoreText: {fileID: 0}
   alienMGBehaviorScript: {fileID: 831608783}
   playButtonText: {fileID: 463460803}
   textforPlayBtn:
@@ -6207,6 +6210,17 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1793089058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1204456198140928599, guid: dc428757353362c48950f8572c57ec18, type: 3}
+  m_PrefabInstance: {fileID: 902153152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815469579
 GameObject:
   m_ObjectHideFlags: 0

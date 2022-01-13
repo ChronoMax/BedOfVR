@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
         FPScounter(toggleCheck);
 
-        SettingHighScore();
+        SettingHighScoreAlien();
     }
 
     // Update is called once per frame
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SettingHighScore()
+    void SettingHighScoreAlien()
     {
         scoreText.text = "Highscore: " + alienScore;
     }
@@ -108,11 +108,14 @@ public class GameManager : MonoBehaviour
 
         if (playingMinigame)
         {
-            alienScore = tempScore;
-            if (tempScore >= alienScore)
+            if (tempScore > alienScore)
             {
-                SettingHighScore();
+                alienScore = tempScore;
             }
+
+            SettingHighScoreAlien();
+
+            tempScore = 0;
 
             playingMinigame = false;
         }
