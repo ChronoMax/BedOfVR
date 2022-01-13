@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     float fps;
     float deltaTime;
 
+    bool playingMinigame;
+
+    [SerializeField]
+    Text timerText;
+
+    [SerializeField]
+    float timerSec;
+
     [SerializeField]
     AlienMGBehavior alienMGBehaviorScript;
     [SerializeField]
@@ -48,11 +56,30 @@ public class GameManager : MonoBehaviour
         intFps = (int)fps;
 
         FPScounterText.text = "FPS: "+intFps;
+
+        if (playingMinigame)
+        {
+            timerSec -= Time.deltaTime;
+            timerText.text = "Time: 0:" + (int)timerSec;
+        }
     }
 
     public void FPScounter(bool toggle)
     {
         FPScounterText.enabled = toggle;
+    }
+
+    void TimerFunc()
+    {
+        if (playingMinigame)
+        {
+            timerSec = 60f;
+            playingMinigame = false;
+        }
+        else if (!playingMinigame)
+        {
+            playingMinigame = true;
+        }
     }
 
     public void StartAlienMG()
@@ -65,6 +92,8 @@ public class GameManager : MonoBehaviour
         {
             playButtonText.text = textforPlayBtn[0];
         }
+
+        TimerFunc();
 
         alienMGBehaviorScript.StartAlienMG();
     }

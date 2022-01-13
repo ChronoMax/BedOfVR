@@ -252,6 +252,7 @@ Transform:
   m_Children:
   - {fileID: 1205631793597359981}
   - {fileID: 1205631795210128745}
+  - {fileID: 1635230970}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -494,3 +495,77 @@ Transform:
   m_Father: {fileID: 1205631794109515734}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7242957596531554055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1205631794109515734}
+    m_Modifications:
+    - target: {fileID: 7242957597078016993, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_Name
+      value: PlayBtnAlien
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.982852
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1864736
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.4457564
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8000202
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.599973
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -73.736
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597223954349, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_Text
+      value: PREVIEW TEXT
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597223954351, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_Name
+      value: PlayBtnText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242957597650287633, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+--- !u!4 &1635230970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7242957597078017021, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
+  m_PrefabInstance: {fileID: 7242957596531554055}
+  m_PrefabAsset: {fileID: 0}
