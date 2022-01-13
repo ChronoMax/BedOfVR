@@ -6922,13 +6922,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1416205769142268305, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-      propertyPath: bullet
-      value: 
-      objectReference: {fileID: 1902049129490384726, guid: d68324b2a05a14d489b3d074c6d0b889, type: 3}
+    - target: {fileID: 384938194, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 604535237, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7632457594954453152, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: Pistol
       objectReference: {fileID: 0}
     - target: {fileID: 7632457594954453162, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
       propertyPath: m_RootOrder
@@ -6944,7 +6948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7632457594954453162, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.141052
+      value: -3.211
       objectReference: {fileID: 0}
     - target: {fileID: 7632457594954453162, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6978,32 +6982,5 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1346214784}
-    - target: {fileID: 7632457594954453167, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 7632457593118310200}
-    - target: {fileID: 7632457594954453167, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SchootBullet
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632457594954453167, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Pistol, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7632457594954453167, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-      propertyPath: m_Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
---- !u!114 &7632457593118310200 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1416205769142268305, guid: da0d7e98cf4ccd04eb10ac443f3f80fa, type: 3}
-  m_PrefabInstance: {fileID: 7632457593118310199}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25efd3442fc94e4aba8185de0a76ff8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
