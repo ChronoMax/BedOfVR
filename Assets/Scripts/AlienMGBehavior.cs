@@ -8,16 +8,24 @@ public class AlienMGBehavior : MonoBehaviour
     [SerializeField]
     GameObject alienPrefab, spawnblock, spawnblock2, destroyBlock, destroyBlock2;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartAlienMG();
-    }
+    bool playing;
 
     public void StartAlienMG()
     {
-        var time = Random.Range(1f, 5f);
-        InvokeRepeating("GetRandomSpawnpoint", 0f, time);
+        if (!playing)
+        {
+            playing = true;
+        }
+        else
+        {
+            playing = false;
+        }
+
+        if (playing)
+        {
+            var time = Random.Range(1f, 5f);
+            InvokeRepeating("GetRandomSpawnpoint", 0f, time);
+        }
     }
 
     void GetRandomSpawnpoint()

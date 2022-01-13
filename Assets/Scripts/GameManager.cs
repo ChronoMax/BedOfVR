@@ -11,6 +11,14 @@ public class GameManager : MonoBehaviour
     float deltaTime;
 
     [SerializeField]
+    AlienMGBehavior alienMGBehaviorScript;
+    [SerializeField]
+    Text playButtonText;
+
+    [SerializeField]
+    List<string> textforPlayBtn;
+
+    [SerializeField]
     int intFps;
 
     [SerializeField]
@@ -25,6 +33,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        playButtonText.text = textforPlayBtn[0];
 
         FPScounter(toggleCheck);
     }
@@ -43,5 +53,22 @@ public class GameManager : MonoBehaviour
     public void FPScounter(bool toggle)
     {
         FPScounterText.enabled = toggle;
+    }
+
+    public void StartAlienMG()
+    {
+        for (int i = 0; i < textforPlayBtn.Count; i++)
+        {
+            if (playButtonText.text == textforPlayBtn[0])
+            {
+                playButtonText.text = textforPlayBtn[1];
+            }
+            else if (playButtonText.text == textforPlayBtn[1])
+            {
+                playButtonText.text = textforPlayBtn[0];
+            }
+        }
+
+        alienMGBehaviorScript.StartAlienMG();
     }
 }

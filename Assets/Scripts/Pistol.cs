@@ -18,8 +18,12 @@ public class Pistol : MonoBehaviour
                 Destroy(hit.collider.gameObject);
                 //Add point
             }
+            else if (hit.collider.tag == "PlayBtnAlien")
+            {
+                GameManager.Instance.StartAlienMG();
+            }
         }
 
-        Instantiate(bullet, this.transform.position, Quaternion.identity);
+        //Instantiate(bullet, this.transform.position, Quaternion.identity);
     }
 }
