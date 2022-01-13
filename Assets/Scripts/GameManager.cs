@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     float fps;
     float deltaTime;
 
-    public bool playingMinigame = false;;
+    public bool playingMinigame = false;
 
     [SerializeField]
     Text timerText;
