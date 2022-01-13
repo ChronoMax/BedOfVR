@@ -7060,7 +7060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7242957597223954349, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
       propertyPath: m_Text
-      value: Shoot me if you want to play! :)
+      value: PREVIEW TEXT
       objectReference: {fileID: 0}
     - target: {fileID: 7242957597223954351, guid: d996a1e0e324ee242aa1e0337a088671, type: 3}
       propertyPath: m_Name
