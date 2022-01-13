@@ -57,16 +57,13 @@ public class GameManager : MonoBehaviour
 
     public void StartAlienMG()
     {
-        for (int i = 0; i < textforPlayBtn.Count; i++)
+        if (playButtonText.text == textforPlayBtn[0])
         {
-            if (textforPlayBtn[0] == playButtonText.text)
-            {
-                playButtonText.text = textforPlayBtn[1];
-            }
-            else if (textforPlayBtn[1] == playButtonText.text)
-            {
-                playButtonText.text = textforPlayBtn[0];
-            }
+            playButtonText.text = textforPlayBtn[1];
+        }
+        else if (playButtonText.text == textforPlayBtn[1])
+        {
+            playButtonText.text = textforPlayBtn[0];
         }
 
         alienMGBehaviorScript.StartAlienMG();
