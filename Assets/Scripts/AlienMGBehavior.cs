@@ -25,6 +25,11 @@ public class AlienMGBehavior : MonoBehaviour
         {
             var time = Random.Range(1f, 5f);
             InvokeRepeating("GetRandomSpawnpoint", 0f, time);
+
+            if (!playing)
+            {
+                CancelInvoke();
+            }
         }
     }
 
@@ -32,11 +37,6 @@ public class AlienMGBehavior : MonoBehaviour
     {
         var pos = new Vector3(spawnblock.transform.position.x, spawnblock.transform.position.y, Random.Range(spawnblock.transform.position.z, spawnblock2.transform.position.z));
         SpawnAlien(pos);
-
-        if (!playing)
-        {
-            CancelInvoke();
-        }
     }
 
     void SpawnAlien(Vector3 pos)
