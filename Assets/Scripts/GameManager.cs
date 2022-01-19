@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text timerText, scoreText, alienScoreText, boxingScoreText;
 
-    public int tempScore, alienScore, boxingScore;
+    int tempScore, alienScore, boxingScore;
     float timerSec;
 
     [SerializeField]
