@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text timerText, scoreText, alienScoreText, boxingScoreText;
 
-    int tempScore, alienScore, boxingScore;
+    public int tempScore, alienScore, boxingScore;
     float timerSec;
 
     [SerializeField]
@@ -63,12 +63,12 @@ public class GameManager : MonoBehaviour
         {
             timerSec -= Time.deltaTime;
             timerText.text = "Time: 0:" + (int)timerSec;
+            scoreText.text = "Score: " + tempScore;
 
             if (timerSec <= 0)
             {
                 StartAlienMG();
-            }
-            scoreText.text = "Score: " + tempScore;
+            }            
         }
     }
 
@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
         }
         else if(!playingMinigame)
         {
+            SettingHighScoreAlien();
             playingMinigame = true;
         }
 
