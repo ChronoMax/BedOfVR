@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 public class LocomotionController : MonoBehaviour
 {
-    public XRController leftTeleportRay;
+    public XRController leftTeleportRay, leftGrabRay;
     public InputHelpers.Button teleportationActivationButton;
     public float activationTreshhold = 0.1f;
 
@@ -14,6 +14,14 @@ public class LocomotionController : MonoBehaviour
         if (leftTeleportRay)
         {
             leftTeleportRay.gameObject.SetActive(CheckIfActivated(leftTeleportRay));
+        }
+        if (!CheckIfActivated(leftGrabRay))
+        {
+            leftGrabRay.gameObject.SetActive(true);
+        }
+        else
+        {
+            leftGrabRay.gameObject.SetActive(false);
         }
     }
 

@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5392005081053707914}
-  m_LocalRotation: {x: -0, y: -0.0071458193, z: -0, w: 0.9999745}
+  m_LocalRotation: {x: 0, y: -0.007147031, z: 0, w: 0.99997455}
   m_LocalPosition: {x: 1.01, y: 1.56, z: -2.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 5392005081483834199}
   - component: {fileID: 5392005081483834198}
   - component: {fileID: 5392005081483834185}
+  - component: {fileID: 304418131}
   m_Layer: 0
   m_Name: Locomotion System
   m_TagString: Untagged
@@ -337,6 +338,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 5392005081483834196}
+--- !u!114 &304418131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5392005081483834187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f935174d150fc646bcd1470fc5977d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTeleportRay: {fileID: 5392005081773259099}
+  leftGrabRay: {fileID: 0}
+  teleportationActivationButton: 14
+  activationTreshhold: 0.1
 --- !u!1 &5392005081710029367
 GameObject:
   m_ObjectHideFlags: 0
