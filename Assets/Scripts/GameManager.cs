@@ -7,30 +7,28 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public bool playingMinigame = false, alienMGbool = false, boxingMGbool = false;
+    [Header("General")]
+    [SerializeField] Text FPScounterText;
+
+    [Header("AlienAttackMG")]
+    [SerializeField] List<string> textforPlayBtn;
+    [SerializeField] Text alienTimerText;
+    [SerializeField] Text alienScoreText;
+    [SerializeField] AlienMGBehavior alienMGBehaviorScript;
+    [SerializeField] Text playButtonText;
+
+    [Header("BoxingMG")]
+    [SerializeField] List<string> textForBoxingPlayBtn;
+    [SerializeField] Text boxingTimerText;
+    [SerializeField] Text boxingScoreText;
+    [SerializeField] BoxingMGBehavior boxingMGBehavior;
+    [SerializeField] Text boxingPlayBtnText;
+
     float fps;
     float deltaTime;
-
-    public bool playingMinigame = false;
-
-    [SerializeField]
-    Text timerText, scoreText, alienScoreText, boxingScoreText;
-
-    int tempScore, alienScore, boxingScore;
     float timerSec;
-
-    [SerializeField]
-    AlienMGBehavior alienMGBehaviorScript;
-    [SerializeField]
-    Text playButtonText;
-
-    [SerializeField]
-    List<string> textforPlayBtn;
-
-    [SerializeField]
-    int intFps;
-
-    [SerializeField]
-    Text FPScounterText;
+    int tempScore, alienScore, intFps, boxingScore;
 
     bool toggleCheck = false;
 
@@ -43,10 +41,12 @@ public class GameManager : MonoBehaviour
         }
 
         playButtonText.text = textforPlayBtn[0];
+        boxingPlayBtnText.text = textForBoxingPlayBtn[0];
 
         FPScounter(toggleCheck);
 
         SettingHighScoreAlien();
+        SetBoxingHighscore();
     }
 
     // Update is called once per frame
@@ -62,13 +62,28 @@ public class GameManager : MonoBehaviour
         if (playingMinigame)
         {
             timerSec -= Time.deltaTime;
-            timerText.text = "Time: 0:" + (int)timerSec;
-            scoreText.text = "Score: " + tempScore;
 
-            if (timerSec <= 0)
+            if (alienMGbool)
             {
-                StartAlienMG();
-            }            
+                alienTimerText.text = "Time: 0:" + (int)timerSec;
+                alienScoreText.text = "Score: " + tempScore;
+
+                if (timerSec <= 0)
+                {
+                    StartAlienMG();
+                }
+            }
+            else if (boxingMGbool)
+            {
+                boxingTimerText.text = "Time: 0:" + (int)timerSec;
+                boxingScoreText.text = "Score: " + tempScore;
+
+                if (timerSec <= 0)
+                {
+                    StartBoxingMG();
+                }
+            }
+        
         }
     }
 
@@ -92,7 +107,7 @@ public class GameManager : MonoBehaviour
 
     void SettingHighScoreAlien()
     {
-        scoreText.text = "Highscore: " + alienScore;
+        alienScoreText.text = "Highscore: " + alienScore;
     }
 
     public void StartAlienMG()
@@ -114,19 +129,57 @@ public class GameManager : MonoBehaviour
             }
 
             SettingHighScoreAlien();
-
             tempScore = 0;
-
             playingMinigame = false;
+            alienMGbool = false;
         }
         else if(!playingMinigame)
         {
             SettingHighScoreAlien();
             playingMinigame = true;
+            alienMGbool = true;
         }
 
         TimerFunc();
 
         alienMGBehaviorScript.StartAlienMG();
+    }
+
+    public void StartBoxingMG()
+    {
+        if (boxingPlayBtnText.text == textForBoxingPlayBtn[0])
+        {
+            boxingPlayBtnText.text = textForBoxingPlayBtn[1];
+        }
+        else
+        {
+            boxingPlayBtnText.text = textForBoxingPlayBtn[0];
+        }
+
+        if (playingMinigame)
+        {
+            if (tempScore > boxingScore)
+            {
+                boxingScore = tempScore;
+            }
+
+            SetBoxingHighscore();
+            tempScore = 0;
+            playingMinigame = false;
+            boxingMGbool = false;
+        }
+        else if (!playingMinigame)
+        {
+            SetBoxingHighscore();
+            playingMinigame = true;
+            boxingMGbool = true;
+        }
+
+        TimerFunc();
+    }
+
+    void SetBoxingHighscore()
+    {
+        boxingScoreText.text = "Highscore: " + boxingScore;
     }
 }

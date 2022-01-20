@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - PlayBtnAlien
   - BoxingSack
+  - PlayBtnBoxing
   layers:
   - Default
   - TransparentFX
