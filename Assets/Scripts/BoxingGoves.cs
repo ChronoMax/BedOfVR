@@ -12,12 +12,7 @@ public class BoxingGoves : MonoBehaviour
         }
         if (collision.gameObject.tag == "BoxingSack")
         {
-            //Add point.
+            GameManager.Instance.addPoint();
         }
-    }
-
-    IEnumerator ResetBool()
-    {
-        yield return new WaitForSeconds(10);
     }
 }
