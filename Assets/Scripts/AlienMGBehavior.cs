@@ -36,7 +36,7 @@ public class AlienMGBehavior : MonoBehaviour
             CancelInvoke();
         }
 
-        var pos = new Vector3(spawnblock.transform.position.x, spawnblock.transform.position.y, Random.Range(spawnblock.transform.position.z, spawnblock2.transform.position.z));
+        var pos = new Vector3(Random.Range(spawnblock.transform.position.x, spawnblock2.transform.position.x), spawnblock.transform.position.y, spawnblock.transform.position.z);
         SpawnAlien(pos);
     }
 
