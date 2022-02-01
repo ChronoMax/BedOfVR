@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 726924637487164206}
   - component: {fileID: 726924637487164207}
   - component: {fileID: 726924637487164200}
-  - component: {fileID: 726924637487164201}
   - component: {fileID: 726924637487164202}
   - component: {fileID: 726924637487164203}
   - component: {fileID: 7205022341327813515}
+  - component: {fileID: 1646326047636989745}
   m_Layer: 6
   m_Name: Pistol
   m_TagString: Untagged
@@ -88,19 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &726924637487164201
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 726924637487164196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &726924637487164202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -259,6 +246,19 @@ MonoBehaviour:
   bullet: {fileID: 1902049129490384726, guid: d68324b2a05a14d489b3d074c6d0b889, type: 3}
   raycastPos: {fileID: 726924637596152931}
   endRaycastPos: {fileID: 726924638371462512}
+--- !u!65 &1646326047636989745
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726924637487164196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19589871, y: 0.45429853, z: 0.34989476}
+  m_Center: {x: 0.03117755, y: -0.2728508, z: -0.0063592196}
 --- !u!1 &726924637596152931
 GameObject:
   m_ObjectHideFlags: 0

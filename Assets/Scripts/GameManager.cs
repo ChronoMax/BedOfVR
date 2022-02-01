@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         if (playingMinigame)
         {
-            timerSec = 10f;
+            timerSec = 60f;
         }
     }
 
